@@ -1,0 +1,242 @@
+@import './tokens.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+  background-color: var(--ivory);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  overflow-x: clip;
+  background-color: var(--ivory);
+  color: var(--ink);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  overflow-wrap: break-word;
+  min-width: 0;
+  text-wrap: balance;
+}
+
+p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+/* Instant keyboard focus indicator */
+:focus-visible {
+  outline: 2px solid var(--wine);
+  outline-offset: 3px;
+}
+
+/* Skip to content link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: var(--space-4);
+  z-index: 200;
+  padding: var(--space-2) var(--space-4);
+  background: var(--wine);
+  color: var(--on-dark);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.skip-link:focus {
+  top: var(--space-4);
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section {
+  padding-block: var(--space-9);
+}
+
+.section--cream {
+  background-color: var(--cream);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+/* Editorial label — sentence case, untracked, body face */
+.section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--olive);
+  margin-bottom: var(--space-3);
+}
+
+.section-title {
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  color: var(--ink);
+  margin-bottom: var(--space-4);
+}
+
+.section-lead {
+  font-size: 1.0625rem;
+  color: var(--ink-muted);
+  max-width: 60ch;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 12px 22px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  border: 1px solid transparent;
+  transition:
+    background-color var(--duration-fast) var(--ease-editorial),
+    border-color var(--duration-fast) var(--ease-editorial),
+    color var(--duration-fast) var(--ease-editorial),
+    transform var(--duration-fast) var(--ease-editorial);
+}
+
+.btn:active {
+  transform: translateY(1px) scale(0.985);
+}
+
+.btn--primary {
+  background-color: var(--wine);
+  color: var(--on-dark);
+}
+
+.btn--primary:hover {
+  background-color: var(--wine-hover);
+}
+
+.btn--secondary {
+  background-color: var(--cream);
+  color: var(--ink);
+  border-color: var(--line-strong);
+}
+
+.btn--secondary:hover {
+  background-color: var(--beige);
+  border-color: var(--bronze);
+}
+
+.btn--ghost {
+  background-color: transparent;
+  color: var(--ink);
+  border-color: var(--line-strong);
+}
+
+.btn--ghost:hover {
+  border-color: var(--wine);
+  color: var(--wine);
+}
+
+/* Signature Arch Frame */
+.arch-frame {
+  border-radius: var(--radius-arch);
+  overflow: hidden;
+  background-color: var(--cream);
+  border: 1px solid var(--line);
+}
+
+/* Editorial Links & Filter Pills */
+.nav-link,
+.footer-link {
+  color: var(--ink-muted);
+  transition: color var(--duration-fast) var(--ease-editorial);
+}
+
+.nav-link:hover,
+.footer-link:hover {
+  color: var(--wine);
+}
+
+.filter-pill {
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--line-strong);
+  background-color: transparent;
+  color: var(--ink-muted);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition:
+    background-color var(--duration-fast) var(--ease-editorial),
+    border-color var(--duration-fast) var(--ease-editorial),
+    color var(--duration-fast) var(--ease-editorial);
+}
+
+.filter-pill:hover {
+  border-color: var(--wine);
+  color: var(--wine);
+}
+
+.filter-pill--active,
+.filter-pill--active:hover {
+  border-color: var(--wine);
+  background-color: var(--wine);
+  color: var(--on-dark);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

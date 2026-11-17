@@ -1,0 +1,68 @@
+/* ==========================================================================
+   Thanh Di — Design Tokens (Editorial Luxe · Di sản thanh lịch)
+   ========================================================================== */
+
+:root {
+  /* Surface & Background */
+  --ivory: #f8f5f2;
+  --ivory-elevated: #fcfaf8;
+  --cream: #eee8e1;
+  --beige: #d4cabe;
+  --surface-glass: rgba(248, 245, 242, 0.86);
+  --surface-glass-strong: rgba(248, 245, 242, 0.96);
+
+  /* Ink & Text */
+  --ink: #302b28;
+  --ink-muted: #5c534c;
+  --ink-subtle: #6b6058;
+  --on-dark: #f8f5f2;
+
+  /* Brand Accents */
+  --wine: #720000;
+  --wine-hover: #510000;
+  --bronze: #955930;
+  --bronze-soft: #b5825a;
+  --olive: #566145;
+
+  /* Borders & Hairlines */
+  --line: #ded5cc;
+  --line-strong: #c8bcb0;
+
+  /* Typography */
+  --font-display: 'Alegreya', Georgia, 'Times New Roman', serif;
+  --font-body: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
+
+  /* Spacing Scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 88px;
+  --space-10: 112px;
+
+  /* Radii */
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-arch: 140px 140px 12px 12px;
+  --radius-arch-sm: 110px 110px 8px 8px;
+  --radius-pill: 999px;
+
+  /* Layout */
+  --container-max: 1200px;
+  --gutter: clamp(20px, 4vw, 40px);
+
+  /* Motion */
+  --ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 220ms;
+  --duration-base: 420ms;
+  --duration-slow: 680ms;
+
+  /* Elevation */
+  --shadow-soft: 0 14px 40px rgba(48, 43, 40, 0.06);
+  --shadow-card: 0 8px 24px rgba(48, 43, 40, 0.05);
+}
